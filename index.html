@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adota Pet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+    
+<main>
+
+    <!-- Aqui vai o cabeçalho -->
+<nav class="cabecalho ">
+
+<div class="logo "> 
+<img src=".\img\logo_adota_pet.png" alt="logo do site" >
+
+</div>
+<div class="botoesCabecalho  ">
+
+<button class="btnCabecalho"> ADOTAR UM AMIGUINHO</button>
+<button class="btnCabecalho"> DIVULGAR UM AMIGUINHO</button>
+
+</div>
+
+</nav>
+
+<!-- Fim cabeçalho -->
+
+
+<!-- banner do site -->
+<section class="banner ">
+    
+    <img src=".\img\banner_site.png" alt="banner do site" >
+</section>
+<!-- fim banner do site -->
+
+<!-- barra de pesquisa -->
+<section class="pesquisar "> 
+    <label class="pesquisar-label"> Localize seu amiguinho: </label>
+    <div class="pesquisar-input-container">
+        <input type="text" class="pesquisar-input" placeholder="Digite sua pesquisa">
+        <button class="pesquisar-button"> &#128269;</button>
+    </div>
+</section>
+<!-- fim barra de pesquisa -->
+
+
+
+<!-- Card dos animais PARA ADOTAR -->
+<section class="animaisParaAdocao bordaExterna">
+    <h2>ANIMAIS PARA ADOTAR</h2>
+    <div id="cards-container">
+    </div>
+</section>
+<!-- FIM Card dos animais PARA ADOTAR -->
+
+
+<!-- Card dos animais ADOTADOS -->
+<section class="animaisAdotados bordaExterna">
+    <h2>ANIMAIS ADOTADOS</h2>
+    <div class="cardsAdotados" id="cardsAdotados"></div>
+</section>
+<!-- FIM Card dos animais ADOTADOS -->
+
+
+
+<!-- Card dos DEPOIMENTOS -->
+<section class="depoimentos">
+    <h2>DEPOIMENTOS</h2>
+    <div id="cards-depoimentos" class="cards-depoimentos">
+        <!-- Os cards serão inseridos aqui dinamicamente -->
+    </div>
+</section>
+
+<!-- FIM Card dos DEPOIMENTOS -->
+
+
+
+
+
+<!-- Card PENSE NISSO -->
+<!-- Seção Pense Nisso (HTML) -->
+<section class="penseNisso bordaExterna">
+    <p>PENSE NISSO</p>
+    <div class="penseNisso-cards">
+        <!-- Os textos serão inseridos aqui via JavaScript -->
+    </div>
+</section>
+
+<!-- FIM Card PENSE NISSO -->
+
+
+
+
+
+<!-- Inicio Rodape -->
+<footer class="rodape bordaExterna">
+    <div class="midias">
+        <span>&#128222; WhatsApp</span>
+        <span>&#128247; Instagram</span>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024  AdotaPet Todos os direitos reservados.</p>
+    </div>
+</footer>
+<!-- FIM Rodape -->
+</main>
+
+
+
+<script src="para_adotar.js"></script>
+<script src="app.js"></script>
+<script src="animais_adotados.js"></script>
+<script src="depoimentos.js"></script>
+<script src="pense_nisso.js"></script>
+
+
+</body>
+</html>

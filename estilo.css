@@ -1,0 +1,502 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative; 
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('./img/fundo_transparente.png'); 
+    background-size: cover; /* Faz com que a imagem cubra todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Faz com que a imagem permaneça fixa quando a página é rolada */
+}
+
+
+
+
+main {
+
+    width: 96%;
+    margin: 0 auto;
+}
+
+
+
+.bordaExterna {
+    border: 1px solid rgb(234, 232, 185);
+}
+
+.bordaInterna {
+    border: 1px solid rgb(50, 21, 179);
+}
+
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    max-width: 100%; 
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza o cabeçalho horizontalmente */
+    
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar destaque */
+    padding: 10px 10px; /* Espaçamento interno */
+    display: flex;
+    justify-content: space-between; /* Espaça a logo e os botões */
+    align-items: center;
+    margin: 0 auto; /* Centraliza o cabeçalho dentro do main */
+
+   
+    background-image: url('./img/fundo_transparente.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+   
+
+    
+}
+
+.logo{
+    margin-left: 90px;
+}
+
+
+.logo  img{
+   
+    width: 140px;
+     
+   
+}
+
+.botoesCabecalho{
+    display: flex;
+    gap:40px;
+    width:800px;
+    margin-right: 40px;
+   
+}
+
+.btnCabecalho {
+    padding: 20px 40px;
+    cursor: pointer;
+    border: none;
+    background-color: beige;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btnCabecalho:hover {
+    background-color: #f0a500; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Efeito de leve elevação */
+}
+
+.btnCabecalho:active {
+    background-color: #d88a00; /* Cor de fundo ao clicar */
+    transform: translateY(0); /* Retira a elevação ao clicar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menos sombra ao clicar */
+}
+
+
+.banner {
+    width: 100%;
+    height: 480px; 
+    overflow: hidden; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 210px;
+
+}
+
+.banner img {
+    width: 100%;
+    height:100%; /* Mantém a proporção da imagem */
+    display: block; 
+    object-fit: cover; /* Garante que a imagem cubra completamente a seção */
+}
+ 
+/* Configuração do botao pesquisar */
+.pesquisar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 254, 225, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pesquisar-label {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.pesquisar-input-container {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pesquisar-input {
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+}
+
+.pesquisar-input::placeholder {
+    color: #999;
+}
+
+.pesquisar-button {
+    background-color: #f0a4007e;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pesquisar-button:hover {
+    background-color: #d88a00;
+}
+
+.pesquisar-button:active {
+    background-color: #bf7500;
+}
+
+
+/* Fim da configuração do botão pesquisar */
+
+
+/* Card dos animais PARA ADOTAR */
+
+.animaisParaAdocao {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f7e3e3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.animaisParaAdocao h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.card span {
+    font-weight: bold;
+    color: #333;
+}
+
+.card button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #f0a500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #d88a00;
+}
+/* FIM Card dos animais PARA ADOTAR */
+
+
+
+/*Card dos animais ADOTADOS*/
+
+.animaisAdotados {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #dde6ec;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.animaisAdotados h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.cardsAdotados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardAdotado {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.cardAdotado:hover {
+    transform: translateY(-10px);
+}
+
+.cardAdotado img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cardAdotado .cardInfo {
+    padding: 15px;
+    text-align: center;
+}
+
+.cardAdotado .cardInfo p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.cardAdotado .cardInfo span {
+    font-weight: bold;
+    color: #555;
+}
+
+/*FIM Card dos animais ADOTADOS*/
+
+
+
+/* Card dos DEPOIMENTOS */
+
+/* Estilo para a seção de depoimentos */
+.depoimentos {
+    display: flex;
+    margin-top: 50px; /* Espaço entre o título e os cards */
+    padding: 20px;
+    background-color: #edbfbf; /* Cor de fundo suave para destacar a seção */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Centraliza o título */
+.depoimentos h2 {
+    text-align: center;
+    font-size: 32px; /* Tamanho do título */
+    font-weight: bold; /* Deixa o título em negrito */
+    margin-bottom: 40px; /* Espaço abaixo do título */
+    color: #333; /* Cor do título */
+}
+
+/* Flexbox para os cards */
+.cards-depoimentos {
+    display: flex;
+    flex-direction: column; /* Exibe os cards em coluna */
+    gap: 20px; /* Espaço entre os cards */
+}
+
+/* Estilo dos cards de depoimentos */
+.cardDepoimento {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    overflow: hidden; /* Garante que o conteúdo não saia do card */
+    width: 100%;
+    max-width: 800px; /* Largura máxima dos cards */
+    margin-bottom: 20px;
+}
+
+/* Estilo da imagem do depoimento */
+.cardDepoimento img {
+    width: 40%; /* Largura da imagem */
+    height: auto;
+    border-radius: 10px 0 0 10px; /* Cantos arredondados somente no lado esquerdo */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+}
+
+/* Container para o texto ao lado da imagem */
+.cardDepoimento .texto-conteudo {
+    width: 60%; /* Largura do conteúdo do texto */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Estilo do texto dentro do container de texto */
+.cardDepoimento .historia {
+    font-size: 16px; /* Ajuste o tamanho do texto aqui */
+    color: #555;
+    margin: 0;
+}
+
+/* Estilo do nome e cidade */
+.cardDepoimento .nome, 
+.cardDepoimento .local {
+    font-size: 14px; /* Ajuste o tamanho do texto aqui */
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+/* FIM Card dos DEPOIMENTOS */
+
+
+
+ /* INICIO PENSE NISSO */
+
+.penseNisso {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff5e6; /* Fundo suave para destacar a seção */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título */
+.penseNisso p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d35400; /* Cor para destacar o título */
+    margin-bottom: 30px;
+}
+
+/* Estilo do conteúdo dos textos */
+.penseNisso .penseNisso-cards {
+    display: flex;
+    flex-direction: column; /* Exibe os textos em coluna */
+    gap: 20px;
+}
+
+/* Estilo individual para cada texto */
+.penseNisso-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+ /* FIM PENSE NISSO */
+
+
+
+ /* INICIO RODAPE */
+
+ .rodape {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #ff6347; /* Exemplo de cor para a borda superior */
+}
+
+.midias {
+    margin-bottom: 10px;
+}
+
+.midias span {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 20px;
+    color: #ff6347; /* Cor do ícone e texto */
+    cursor: pointer;
+}
+
+.midias span:hover {
+    color: #fff; /* Mudança de cor ao passar o mouse */
+}
+
+.copyright {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+
+
+ /* FIM RODAPE */
